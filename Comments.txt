@@ -1,0 +1,8 @@
+<B>Mahesh: 10/23/2019</B>
+For every Java 8 Concepts new program to be created. Name the class file as the functionality, Say "LambdaExamples". Every method should be representing various functions. By that way you can understand the concepts. 
+
+In addition to coding, also include notes. 
+
+Adopt GIT. Use GIT command line tools or IDEA GIT utility to create modify and delete files.
+
+Adopt proper package. The class level and method level comments should exactly follow the syntax.
