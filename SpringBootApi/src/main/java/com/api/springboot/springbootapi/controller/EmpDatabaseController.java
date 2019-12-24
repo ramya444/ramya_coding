@@ -26,25 +26,27 @@ public class EmpDatabaseController {
     private MongoTemplate mongoTemplate;
 
 
-    @RequestMapping(value = "/get" ,method = RequestMethod.GET)
+    @RequestMapping(value = "/Api/getallemployeedata" ,method = RequestMethod.GET)
     public List getAllEmp_database(){
-        return  @RequestMapping(value = "/between",method = RequestMethod.GET)
-        public List getpointvalueBetween(){
-            return empDatabaseRepository.findByPointValueBetweenQuery(1000,3000);
-        }
-
-        @RequestMapping(value = "/greater",method = RequestMethod.GET)
-        public List getpointvalueGreaterThan(){
-            return empDatabaseRepository.findByPointValueGreaterThanQuery(5000);
-        }
-        @RequestMapping(value = "/lesser",method = RequestMethod.GET)
-        public List getpointvalueLesserThan(){
-            return empDatabaseRepository.findByPointValueLessThanQuery(3000);empDatabaseRepository.findAll();
+    return empDatabaseRepository.findAll();
     }
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "Api/{id}", method = RequestMethod.GET)
     public EmpDatabase getEmp_databaseById(@PathVariable("id")String id) {
-        return empDatabaseRepository.findBy_id(id);
+    return empDatabaseRepository.findBy_id(id);
     }
+    @RequestMapping(value = "/Api/between",method = RequestMethod.GET)
+    public List getpointvalueBetween(){
+    return empDatabaseRepository.findByPointValueBetweenQuery(1000,3000);
+    }
+    @RequestMapping(value = "/Api/greaterthan5000",method = RequestMethod.GET)
+    public List getpointvalueGreaterThan(){
+    return empDatabaseRepository.findByPointValueGreaterThanQuery(5000);
+    }
+    @RequestMapping(value = "/Api/lesserthan3000",method = RequestMethod.GET)
+    public List getpointvalueLesserThan(){
+    return empDatabaseRepository.findByPointValueLessThanQuery(3000);empDatabaseRepository.findAll();
+    }
+    
 
 //    public List <emppoints>findBypointvalueBetween(int start,int end) {
 //        int query = new Query();
